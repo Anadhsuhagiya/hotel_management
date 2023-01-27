@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hotel_management/Login_Page.dart';
 import 'package:hotel_management/Module.dart';
 import 'package:hotel_management/cart.dart';
 
@@ -64,6 +65,16 @@ class _firstState extends State<first> {
       appBar: AppBar(
 
         actions: <Widget>[
+
+          IconButton(
+              onPressed: () {
+                Navigator.pushReplacement(context, MaterialPageRoute(
+                  builder: (context) {
+                    return Login();
+                  },
+                ));
+              },
+              icon: Icon(Icons.logout)),
           IconButton(
               onPressed: () {
                 Navigator.push(context, MaterialPageRoute(
